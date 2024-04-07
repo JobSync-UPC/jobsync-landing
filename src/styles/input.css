@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.virtual-meeting-bg {
+  background-image: url('../images/virtual-meeting.webp');
+}
+
+.blob-bg {
+  background-image: url('../images/blob-haikei.svg');
+}
+
+@layer base {
+  @font-face {
+    font-family: Monserrat;
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf')format("truetype");
+    font-display: swap;
+  }
+
+  html {
+    font-family: "Monserrat", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .layout {
+    @apply grid grid-cols-1 grid-rows-[auto_1fr_auto] min-h-screen;
+  }
+
+  .section-title {
+    @apply text-5xl text-center font-bold;
+  }
+
+  .box-shadow {
+    @apply shadow-md shadow-gray-400;
+  }
+
+  .feature-card {
+    @apply flex flex-col justify-center items-center box-shadow p-6 gap-2;
+    @apply min-w-[16rem] md:min-w-min;
+  }
+
+  .btn-primary {
+    @apply py-4 px-8 bg-primary;
+  }
+
+  .btn-secondary {
+    @apply py-4 px-8 bg-secondary;
+  }
+
+  .btn-primary-fill {
+    @apply py-4 px-8;
+    @apply text-primary hover:text-white;
+    @apply border-2 border-primary hover:bg-primary;
+    @apply duration-300
+  }
+
+  .btn-secondary-fill {
+    @apply py-4 px-8;
+    @apply text-secondary hover:text-white;
+    @apply border-2 border-secondary hover:bg-secondary;
+    @apply duration-300
+  }
+}

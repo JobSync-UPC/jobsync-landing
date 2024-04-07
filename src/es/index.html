@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon" />
+    <meta name="robots" content="index, follow" />
+    <title>JobSync</title>
+    <meta
+      name="keywords"
+      content="JobSync, recursos humanos, software de reclutamiento, software para RRHH, software para contratacion"
+    />
+    <meta
+      name="description"
+      content="Recluta el mejor talento con JobSync. El mejor software calificado y e intuitivo que te permite ahorrar tiempo y contratar más rápido."
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/typing_sp.js" defer></script>
+  </head>
+  <body class="layout">
+    <div id="responsive-nav-bar" class="hidden md:hidden">
+      <div class="w-full h-full fixed flex justify-center items-center bg-black/50 z-20">
+        <div class="flex flex-col justify-center items-center rounded-xl bg-white w-56 shadow-sm shadow-black p-8 gap-6">
+          <nav>
+            <ul class="flex flex-col font-semibold gap-4">
+              <li>
+                <a href="#product-section" id="product-mobile-nav-link">
+                  <img src="../images/product.svg" alt="Ícono the una computadora con el producto" class="w-6 h-6 inline">
+                  Producto
+                </a>
+              </li>
+              <li>
+                <a href="#customer-section" id="customer-mobile-nav-link">
+                  <img src="../images/customer.svg" alt="Ícono de clientes" class="w-6 h-6 inline">
+                  Clientes
+                </a>
+              </li>
+              <li>
+                <a href="#pricing-section" id="pricing-mobile-nav-link" >
+                  <img src="../images/pricing.svg" alt="Ícono de precio" class="w-6 h-6 inline">
+                  Precio
+                </a>
+              </li>
+              <li>
+                <a href="https://jobsync-app.netlify.app/" referrerpolicy="no-referrer">
+                  <img src="../images/launch.svg" alt="Ícono de lanzamiento" class="w-6 h-6 inline">
+                  Abrir App
+                </a>
+              </li>
+              <li>
+                <a href="/" referrerpolicy="no-referrer">
+                  <img src="../images/the-internet-svgrepo-com.svg" alt="Language switcher icon" class="w-6 h-6 inline fill-black">
+                  English
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button id="close-nav-bar-btn" aria-label="Cerrar barra de navegación">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <header class="flex justify-around items-center box-shadow p-4">
+      <a href="/">
+        <img class="h-12 md:h-16 hover:scale-95 duration-200" src="../images/jobsync-logo.png" alt="JobSync logo">
+      </a>
+      <div class="hidden md:flex">
+        <nav class="font-medium">
+          <ul class="flex items-center gap-6">
+            <li><a href="#product-section" id="product-nav-link" class="hover:text-primary hover:cursor-pointer">Producto</a></li>
+            <li><a href="#customer-section" id="customer-nav-link" class="hover:text-primary hover:cursor-pointer">Clientes</a></li>
+            <li><a href="#pricing-section" id="pricing-nav-link" class="hover:text-primary hover:cursor-pointer">Precio</a></li>
+            <li class="flex items-center justify-center">
+              <a href="https://jobsync-app.netlify.app/" referrerpolicy="no-referrer" class="btn btn-secondary-fill rounded-full">Abrir App</a>
+              <div class="relative inline-block text-left">
+                <button type="button" class="px-3 py-2" id="language-switcher-btn">
+                  <img class="h-10" src="../images/the-internet-svgrepo-com.svg" alt="Language switcher icon">
+                </button>
+                <div id="language-menu" class="absolute rounded-md bg-white shadow-lg hidden" aria-orientation="vertical" aria-labelledby="menu-button">
+                  <div class="py-1" role="none">
+                    <a href="/" class="block px-4 py-2 text-sm">English</a>
+                    <a href="/es" class="block px-4 py-2 text-sm">Español</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button id="toggle-navbar-btn" class="md:hidden rounded-lg p-2" aria-label="Alternar visibilidad de la barra de navegación">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>      
+      </button>
+    </header>
+    <main class="grid grid-cols-1 gap-18">
+      <section class="grid grid-cols-1 md:grid-cols-2 py-12">
+        <div class="flex flex-col justify-center items-center p-12">
+          <div class="text-center md:text-left">
+            <h1 class="section-title md:text-left">El Software Más <br><span id="title-keyword" class="text-primary"></span><span class="text-secondary">|</span><br> de Reclutamiento y<br>Búsqueda de Talento</h1>
+            <p class="text-3xl my-6">Miles de reclutadores ya utilizan JobSync<br>para hacer el proceso de reclutamiento<br>fluido y asequible.</p>
+            <a href="https://jobsync-app.netlify.app/register" referrerpolicy="no-referrer" class="btn-primary-fill w-fit rounded-full font-semibold">Registrarse</a>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <div class="bg-cover bg-center blob-bg p-6 md:p-12 lg:p-16">
+            <img src="../images/hero.webp" alt="Reclutadores felices utilizando JobSync." class="rounded-full">
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col justify-center items-center gap-6">
+        <h2 class="text-3xl text-center">Más de <span class="font-semibold">2000</span> candidatos y  <span class="font-semibold">340</span> organizaciones<br>alrededor del mundo satisfechos con JobSync</h2>
+        <div class="grid justify-items-center grid-cols-1 md:grid-cols-2 xl:flex xl:justify-around gap-8 bg-tertiary py-6 w-full">
+          <img class="h-14 w-auto" src="../images/mercado-libre-logo.png" alt="Mercado Libre logo" loading="lazy">
+          <img class="h-14 w-auto" src="../images/rappi-logo.png" alt="Rappi logo" loading="lazy">
+          <img class="h-14 w-auto" src="../images/alicorp-logo.png" alt="Alicorp logo" loading="lazy">
+          <img class="h-14 w-auto" src="../images/coderhouse-logo.png" alt="Coderhouse logo" loading="lazy">
+          <img class="h-14 w-auto" src="../images/bbva-logo.png" alt="BBVA logo" loading="lazy">
+          <img class="h-14 w-auto" src="../images/oracle-logo.png" alt="Oracle logo" loading="lazy">
+        </div>
+      </section>
+      <section id="product-section" class="flex flex-col justify-center items-center gap-6">
+        <h2 class="section-title">Simple pero <span class="text-primary">potente</span></h2>
+        <p class="text-2xl text-center">Muy recomendado a los reclutadores, por los reclutadores</p>
+        <div class="flex w-full justify-center">
+          <div class="flex overflow-x-auto md:grid md:w-2/3 md:justify-items-center md:grid-cols-2 lg:grid-cols-3 py-8 px-2 gap-8">
+            <div class="feature-card">
+              <img class="h-16 w-auto" src="https://cdn-icons-png.flaticon.com/512/3061/3061341.png" alt="Corporate Buildings" loading="lazy">
+              <h3 class="text-center text-2xl font-semibold">Organización</h3>
+              <p class="text-center">Configura fácilmente tu organización para agregar a todos los reclutadores.</p>
+            </div>
+            <div class="feature-card">
+              <img class="h-16 w-auto" src="https://cdn-icons-png.flaticon.com/512/8342/8342583.png" alt="A tests to be solved" loading="lazy">
+              <h3 class="text-center text-2xl font-semibold">Gestor de pruebas</h3>
+              <p class="text-center">Crea, edita y asigna diferentes tipos de pruebas a tus candidatos.</p>
+            </div>
+            <div class="feature-card">
+              <img class="h-16 w-auto" src="https://cdn-icons-png.flaticon.com/512/7376/7376559.png" alt="Two people holding a virtual meeting" loading="lazy">
+              <h3 class="text-center text-2xl font-semibold">Gestor de reuniones virtuales</h3>
+              <p class="text-center">Crea, edita y asigna una reunión virtual con tus candidatos.</p>
+            </div>
+            <div class="feature-card">
+              <img class="h-16 w-auto" src="https://cdn-icons-png.flaticon.com/512/10261/10261381.png" alt="Paper with useful information about the recruitment process" loading="lazy">
+              <h3 class="text-center text-2xl font-semibold">Acceso rápido a información del proceso</h3>
+              <p class="text-center">Accede a una amplia variedad de información sobre el proceso de reclutamiento como el CV del candidato.</p>
+            </div>
+            <div class="feature-card">
+              <img class="h-16 w-auto" src="https://cdn-icons-png.flaticon.com/512/1295/1295801.png" alt="Person holding out hand receiving money" loading="lazy">
+              <h3 class="text-center text-2xl font-semibold">Precio asequible</h3>
+              <p class="text-center">Ofrecemos el precio más asequible en el mercado.</p>
+            </div>
+            <div class="feature-card">
+              <img class="h-16 w-auto" src="https://cdn-icons-png.flaticon.com/512/9572/9572799.png" alt="Notification bell ringing" loading="lazy">
+              <h3 class="text-center text-2xl font-semibold">Notificaciones automáticas</h3>
+              <p class="text-center">Los candidatos recibirás notificaciones inmediatas según avance el proceso de reclutamiento.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="customer-section" class="flex flex-col justify-center bg-tertiary py-12 items-center">
+        <h2 class="section-title text-4xl italic">
+          Lo <span class="text-primary">mejor</span> en búsqueda de talento proveyendo
+          <br>experiencias únicas
+        </h2>
+        <p class="text-2xl italic text-center my-4">Rappi, Inc.</p>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 p-2 md:p-0 md:w-3/4 xl:w-2/3 gap-6"
+        >
+          <div class="w-full box-shadow bg-white px-3 md:px-6 py-10">
+            <div class="relative flex justify-center items-cente p-6">
+              <div class="absolute left-6 top-6">
+                <span class="text-6xl text-secondary font-extrabold">“</span>
+              </div>
+              <img
+                class="rounded-full"
+                src="../images/user_natalia_pp.png"
+                alt="Foto de perfil de Natalia Gómez Sololev"
+                loading="lazy"
+              />
+            </div>
+            <div class="text-center px-12">
+              <p>
+                Destacaría la facilidad de uso y la experiencia en mi trabajo actual. Actualmente trabajo en BBVA Perú y estoy orgullosa de mis logros junto a JobSync.
+              </p>
+              <p class="text-2xl text-secondary font-semibold my-4">
+                Natalia Gómez Sololev
+              </p>
+              <div class="flex flex-col justify-center items-center gap-2">
+                <p class="text-center">
+                  Analista de procesos en
+                  <span class="font-semibold text-primary">BBVA Peru</span>
+                </p>
+                <img
+                  class="h-12 w-auto"
+                  src="../images/bbva-logo.png"
+                  alt="BBVA Logo"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="w-full box-shadow bg-white px-3 md:px-6 py-10">
+            <div class="relative flex justify-center items-cente p-6">
+              <div class="absolute left-6 top-6">
+                <span class="text-6xl text-secondary font-extrabold">“</span>
+              </div>
+              <img
+                class="rounded-full"
+                src="../images/user_jeffrey_pp.png"
+                alt="Foto de perfil de Jeffrey Ocampos"
+                loading="lazy"
+              />
+            </div>
+            <div class="text-center px-12">
+              <p>
+                JobSync ha sido esencial tanto para detectar y desarrollar el talento dentro de las áreas como para atraer a los profesionales que necesitamos para cubrir las vacantes en nuestra empresa.
+              </p>
+              <p class="text-2xl text-secondary font-semibold my-4">
+                Jeffrey Ocampos
+              </p>
+              <div class="flex flex-col justify-center items-center gap-2">
+                <p class="text-center">
+                  Gerente de Recursos Humanos en
+                  <span class="font-semibold text-primary"
+                    >Mercado Libre Peru</span
+                  >
+                </p>
+                <img
+                  class="h-12 w-auto"
+                  src="../images/mercado-libre-logo.png"
+                  alt="Mercado Libre Logo"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="pricing-section"
+        class="flex flex-col justify-center items-center gap-6"
+      >
+        <h2 class="section-title text-4xl">
+          <span class="text-primary">Un</span> plan,
+          <span class="text-primary">Todas</span> las funcionalidades
+        </h2>
+        <p class="text-3xl">Facturado anualmente</p>
+        <div class="grid md:grid-cols-[auto_1fr] rounded-sm shadow-xl">
+          <div
+            class="flex flex-col justify-center text-center bg-tertiary p-16"
+          >
+            <h3 class="text-3xl font-bold mb-12">Gratis</h3>
+            <a
+              href="https://jobsync-app.netlify.app/register"
+              referrerpolicy="no-referrer"
+              class="btn-primary-fill rounded-full"
+              >Prueba Gratis</a
+            >
+          </div>
+          <div class="flex flex-col justify-center md:w-96 gap-4 p-6 md:p-14">
+            <p>Acceso a</p>
+            <ul>
+              <li class="flex items-center gap-2 mb-2">
+                <img
+                  src="../images/tick.svg"
+                  alt="Ícono de check"
+                  class="w-6 h-6 inline"
+                  loading="lazy"
+                />
+                <span>Todas las funcionalidad de la plataforma.</span>
+              </li>
+              <li class="flex items-center gap-2 mb-2">
+                <img
+                  src="../images/tick.svg"
+                  alt="Ícono de check"
+                  class="w-6 h-6 inline"
+                  loading="lazy"
+                />
+                <span>Cantidad limitada de reclutadores.</span>
+              </li>
+              <li class="flex items-center gap-2 mb-2">
+                <img
+                  src="../images/tick.svg"
+                  alt="Ícono de check"
+                  class="w-6 h-6 inline"
+                  loading="lazy"
+                />
+                <span>Cantidad limitada de candidatos.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-[auto_1fr] rounded-sm shadow-xl">
+          <div
+            class="flex flex-col justify-center text-center bg-tertiary gap-6 p-14"
+          >
+            <h3 class="text-3xl font-bold">Premium</h3>
+            <p class="text-4xl font-bold">
+              $520 <span class="text-sm text-gray-600">/ año</span>
+            </p>
+            <a
+              href="https://jobsync-app.netlify.app/register"
+              referrerpolicy="no-referrer"
+              class="btn-primary-fill rounded-full"
+              >Adquirir Premium</a
+            >
+          </div>
+          <div class="flex flex-col justify-center md:w-96 gap-4 p-6 md:p-14">
+            <p>Acceso a</p>
+            <ul>
+              <li class="flex items-center gap-2 mb-2">
+                <img
+                  src="../images/tick.svg"
+                  alt="Ícono de check"
+                  class="w-6 h-6 inline"
+                  loading="lazy"
+                />
+                <span>Todas las funcionalidades de la plataforma.</span>
+              </li>
+              <li class="flex items-center gap-2 mb-2">
+                <img
+                  src="../images/tick.svg"
+                  alt="Ícono de check"
+                  class="w-6 h-6 inline"
+                  loading="lazy"
+                />
+                <span>Cantidad ilimitada de reclutadores.</span>
+              </li>
+              <li class="flex items-center gap-2 mb-2">
+                <img
+                  src="../images/tick.svg"
+                  alt="Ícono de check"
+                  class="w-6 h-6 inline"
+                  loading="lazy"
+                />
+                <span>Cantidad ilimitada de candidatos.</span>
+              </li>
+              <li class="flex items-center gap-2 mb-2">
+                <img
+                  src="../images/tick.svg"
+                  alt="Ícono de check"
+                  class="w-6 h-6 inline"`
+                  loading="lazy"
+                />
+                <span>Atención al cliente prioritaria 24/7.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="flex flex-col justify-center items-center">
+          <h2 class="text-5xl text-center font-bold">¿Todavía tienes dudas?</h2>
+          <p class="text-center">Vea el siguiente video que hemos preparado para ti acerca de nuestro producto.</p>
+          <div style="max-width: 640px"><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe src="https://upcedupe-my.sharepoint.com/personal/u20201e987_upc_edu_pe/_layouts/15/embed.aspx?UniqueId=2ec5d577-ff0f-49a6-8a2d-bb5801b04687&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="upc-pre-202301-si730-sw52-TestigosDeVue-aboutthe-product-sprint-4.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe></div></div>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+          <h2 class="text-5xl text-center font-bold">¿Quieres saber más sobre nuestra startup?</h2>
+          <p class="text-center">Vea el siguiente video que hemos preparado para usted sobre nosotros y nuestro compromiso con nuestros usuarios.</p>
+          <div style="max-width: 640px"><div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe src="https://upcedupe-my.sharepoint.com/personal/u20201e987_upc_edu_pe/_layouts/15/embed.aspx?UniqueId=6130516b-1d99-4ea3-a84c-3272ac65d422&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="upc-pre-202301-si730-sw52-TestigosDeVue-aboutthe-team-sprint-4.mp4" style="border:none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;"></iframe></div></div>
+        </div>
+      </section>
+      <section class="grid grid-cols-1 grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+        <div class="flex flex-col items-center justify-center bg-primary text-white p-6 md:p-12">
+          <div class="w-2/3">
+            <h2 class="text-5xl font-bold">Comienza hoy mismo</h2>
+            <p class="my-6">Únete a los <span class="font-semibold">30,000</span> reclutadores y candidatos que ya están usando JobSync en sus vidas profesionales.</p>
+            <a class="btn-secondary rounded-full" href="https://jobsync-app.netlify.app/register" referrerpolicy="no-referrer">Registrarse</a>
+          </div>
+        </div>
+        <div class="bg-cover bg-center virtual-meeting-bg h-96"></div>
+      </section>
+    </main>
+    <footer
+      class="flex flex-wrap justify-around items-center text-sm md:text-base py-8 md:py-12"
+    >
+      <div class="flex flex-wrap justify-center items-center gap-6">
+        <img class="h-12" src="../images/jobsync-logo.png" alt="JobSync logo" />
+        <ul class="flex items-center gap-6">
+          <li>
+            <a href="#pricing-section" id="pricing-footer-nav-link" class="hover:cursor-pointer">Precio</a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/jobsyncio"
+              target="_blank"
+              referrerpolicy="no-referrer"
+            >
+              Trabajo
+            </a>
+          </li>
+          <li><a href="/es/terminos-de-servicio">Términos de servicio</a></li>
+        </ul>
+      </div>
+      <div class="flex flex-col gap-2 mt-6">
+        <div class="flex justify-center md:justify-end gap-4">
+          <a
+            href="https://www.facebook.com/jobsync"
+            referrerpolicy="no-referrer"
+            target="_blank"
+          >
+            <img
+              class="h-6 w-auto"
+              src="../images/facebook.svg"
+              alt="Facebook logo"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/jobsync"
+            referrerpolicy="no-referrer"
+            target="_blank"
+          >
+            <img
+              class="h-6 w-auto"
+              src="../images/instagram.svg"
+              alt="Instagram logo"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@jobsync"
+            referrerpolicy="no-referrer"
+            target="_blank"
+          >
+            <img
+              class="h-6 w-auto"
+              src="../images/youtube.svg"
+              alt="Youtube logo"
+            />
+          </a>
+          <a
+            href="https://twitter.com/JobSync"
+            referrerpolicy="no-referrer"
+            target="_blank"
+          >
+            <img
+              class="h-6 w-auto"
+              src="../images/twitter.svg"
+              alt="Twitter logo"
+            />
+          </a>
+        </div>
+        <p class="text-center">
+          2023 &copy; Testigos de Vue - Todos los derechos reservados
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
